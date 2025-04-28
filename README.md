@@ -1,2 +1,4 @@
-# ra2581392313002
-Repositório do aluno BIANCA LUCAS DA SILVA CACULA.
+# Portfólio de Projetos - Fatec Jacareí
+### Aluna: Bianca Lucas da Silva Caçula
+### Curso: Desenvolvimento de Software Multiplataforma
+### Turma: 1º Semestre de 2023
