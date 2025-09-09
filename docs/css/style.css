@@ -1,0 +1,251 @@
+/* ============ Tokens ============ */
+:root{
+  --bg: #a0d3ff;          /* azul clarinho */
+  --bg-alt: #e9f4ff;      /* seção alternada */
+  --text: #0f2e66;        /* azul escuro */
+  --brand: #ffe567;       /* amarelo */
+  --brand-strong:#feb804; /* laranja/amarelo forte */
+  --line: #194fa5;
+  --white:#fff;
+
+  --radius: 16px;
+  --shadow: 0 10px 24px rgba(0,0,0,.08);
+  --shadow-sm: 0 6px 16px rgba(0,0,0,.06);
+
+  --maxw: 1120px;
+}
+
+/* Reset básico */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Rubik", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* Utilidades */
+.container{width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:24px}
+.section{padding:72px 0; scroll-margin-top:96px}
+.section--alt{background:var(--bg-alt)}
+.h1{font-size:clamp(28px, 4vw, 44px); margin:0 0 12px}
+.h2{font-size:clamp(22px, 3vw, 32px); margin:0 0 24px}
+.muted{opacity:.8}
+
+/* Botões */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:12px 18px; border-radius:12px;
+  background:var(--brand); color:var(--text);
+  font-weight:600; text-decoration:none; border:2.5px solid var(--line);
+  transition:transform .2s ease, filter .2s ease;
+}
+.btn:hover{transform:translateY(-2px); filter:brightness(1.02)}
+.btn--primary{background:var(--brand-strong)}
+.btn--dark{background:var(--text); color:var(--white); border-color:transparent}
+
+/* Header */
+.header{
+  position:sticky; top:0; z-index:50;
+  background:color-mix(in lab, var(--brand) 85%, white);
+  border-bottom:3px solid var(--line);
+  backdrop-filter:saturate(1.2) blur(6px);
+}
+.header__content{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+.logo{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+.logo__img{width:48px; height:auto}
+.logo__text{font-size:22px}
+
+/* Menu */
+.menu ul{display:flex; gap:24px; list-style:none; margin:0; padding:0}
+.menu a{color:var(--text); text-decoration:none; font-weight:500; padding:8px 4px; border-radius:8px}
+.menu a:hover{background:#ffcc40}
+
+.menu-toggle{
+  display:none; background:none; border:none; font-size:28px; cursor:pointer; color:var(--text);
+}
+
+/* Mobile nav */
+@media (max-width: 920px){
+  .menu-toggle{display:block}
+  .menu{
+    position:absolute; right:24px; top:68px; width:min(260px, 92vw);
+    background:var(--brand); border:3px solid var(--line);
+    padding:14px; border-radius:12px; box-shadow:var(--shadow); display:none;
+  }
+  .menu ul{flex-direction:column; gap:10px}
+  .menu.active{display:block}
+}
+
+/* Hero */
+.section--hero{padding-top:112px}
+.hero{display:grid; grid-template-columns: 1.1fr .9fr; gap:32px; align-items:center}
+.hero__text p{margin:8px 0 0}
+.hero__cta{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
+.hero__photo img{
+  width:100%; max-width:360px; border-radius:var(--radius);
+  border:3.5px solid var(--line); box-shadow:var(--shadow);
+}
+.mark{background:linear-gradient(transparent 60%, #ffec8a 60%)}
+
+@media (max-width: 920px){
+  .hero{grid-template-columns:1fr}
+  .hero__photo{order:-1; display:flex; justify-content:center}
+}
+
+/* Cards / Grid */
+.grid{display:grid; gap:24px}
+.grid--cards{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+.card{
+  background:var(--white); border-radius:var(--radius); overflow:hidden;
+  border:3px solid var(--line); box-shadow:var(--shadow-sm);
+  transition:transform .25s ease, box-shadow .25s ease;
+  cursor:pointer;
+}
+.card:focus-visible{outline:3px solid #0056b3; outline-offset:2px}
+.card:hover{transform:translateY(-4px); box-shadow:var(--shadow)}
+
+.card__media img{display:block; width:100%; height:auto}
+.card__body{padding:14px 16px}
+.card__title{margin:0 0 6px; font-size:18px}
+
+/* Projetos específicas */
+.projetos-grid .card__media img{border-bottom:3px solid var(--line)}
+
+/* Certificados */
+.certificados-grid{grid-template-columns:repeat(auto-fit, minmax(220px,1fr))}
+.certificado-item img{width:100%; height:auto; display:block}
+.certificado-item figcaption{padding:10px 12px}
+
+/* Social */
+.social{display:flex; gap:18px; flex-wrap:wrap; align-items:center}
+.social__item{
+  display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px;
+  background:var(--white); color:inherit; text-decoration:none;
+  border:2px solid var(--line); transition:transform .2s ease, box-shadow .2s ease;
+}
+.social__item:hover{transform:translateY(-2px); box-shadow:var(--shadow-sm)}
+
+/* Footer */
+.footer{padding:24px 0 36px}
+.footer__content{display:flex; justify-content:space-between; align-items:center}
+.to-top{text-decoration:none; font-weight:700; color:var(--text)}
+
+/* =========================
+   Popup (modal) — versão maior
+   ========================= */
+.popup{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.85); /* +escuro para destacar */
+  display:none;
+  align-items:center; justify-content:center;
+  padding:24px; z-index:100;
+}
+.popup[aria-hidden="false"]{display:flex}
+
+.popup__content{
+  background:var(--white);
+  width:95%;               /* ocupa quase toda a largura */
+  max-width:1200px;        /* limite em telas grandes */
+  max-height:95vh;         /* ocupa quase toda a altura */
+  border-radius:18px;
+  border:3px solid var(--line);
+  box-shadow:var(--shadow);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.popup__close{
+  position:absolute; top:8px; right:12px;
+  border:none; background:transparent; font-size:32px; cursor:pointer; color:var(--text);
+}
+.popup__body{
+  flex:1;
+  display:flex; justify-content:center; align-items:center;
+  overflow:auto; /* permite scroll se necessário */
+  padding:16px;
+}
+.popup__body img{
+  width:100%; height:auto;
+  max-height:90vh;         /* garante que caiba na tela */
+  object-fit:contain;      /* mantém proporção */
+  border-radius:12px; display:block;
+}
+.popup__cta{margin:0 18px 18px; display:inline-flex}
+
+/* Pequenos refinamentos */
+img{border:0}
+
+/* Links de projeto sem “cara de link” */
+.projeto-item {
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  cursor:pointer;          /* reforça que é clicável */
+}
+
+/* deixa certificado com cursor de clique também */
+.certificado-item { cursor:pointer; }
+
+/* ====== Centro VERTICAL no MODAL ====== */
+/* Garante altura total para cálculo */
+html, body { height: 100%; }
+
+/* Usa grid para centralizar perfeitamente em qualquer tamanho de tela */
+.popup {
+  /* já tem position:fixed e inset:0 lá em cima */
+  display: none;                /* fechado por padrão */
+  place-items: center;          /* centraliza vertical e horizontal */
+}
+.popup[aria-hidden="false"] {
+  display: grid;                /* quando abrir, vira grid e centraliza */
+}
+
+/* Limita o conteúdo ao viewport dinâmico (melhor em mobile) */
+.popup__content {
+  width: min(1200px, 95dvw);    /* usa dvw para evitar bugs do 100vh em mobile */
+  max-height: 95dvh;            /* quase tela cheia, sem estourar */
+  margin: 0;                    /* evita deslocamentos */
+}
+
+/* Corpo do modal também centraliza o que estiver dentro */
+.popup__body {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  overflow: auto;               /* scroll se ficar maior que o limite */
+}
+
+/* A imagem ocupa a maior área possível, mas sempre central e com proporção */
+.popup__body img {
+  width: 100%;
+  height: auto;
+  max-height: calc(90dvh - 64px); /* reserva espaço para padding/btn fechar */
+  object-fit: contain;           /* nada fica cortado */
+  border-radius: 12px;
+}
+
+/* Botão fechar sempre acessível */
+.popup__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+
+/* ====== (Opcional) Centro VERTICAL na GRADE dos certificados ====== */
+/* Se quiser que os thumbs (na página) fiquem centralizados verticalmente
+   dentro do card, fixe uma altura e centralize o conteúdo */
+.certificado-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centraliza vertical */
+  align-items: center;       /* centraliza horizontal */
+  min-height: 280px;         /* ajuste conforme seu gosto/miniaturas */
+  text-align: center;
+}
+.certificado-item img {
+  max-height: 220px;         /* impede que passe do card */
+  object-fit: contain;
+}

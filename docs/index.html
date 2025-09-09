@@ -2,222 +2,358 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Bianca Lucas</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <title>Bianca Lucas — Portfólio</title>
+    <meta
+      name="description"
+      content="Portfólio de Bianca Lucas: projetos, certificados e contato."
+    />
+    <link rel="icon" href="images/raio.png" type="image/png" />
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="images/raio.png" alt="Logo Bianca Lucas" class="logo-img" />
-        <strong>Bianca Lucas</strong>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="container header__content">
+        <a class="logo" href="#top" aria-label="Ir para o topo">
+          <img
+            src="images/raio.png"
+            alt=""
+            class="logo__img"
+            width="48"
+            height="48"
+          />
+          <strong class="logo__text">Bianca Lucas</strong>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          ☰
+        </button>
+
+        <nav
+          id="menu"
+          class="menu"
+          role="navigation"
+          aria-label="Navegação principal"
+        >
+          <ul>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#certificados">Certificados</a></li>
+          </ul>
+        </nav>
       </div>
-      <button class="menu-toggle">☰</button>
-      <nav class="menu">
-        <ul>
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#certificados">Certificados</a></li>
-          <li><a href="#contato" class="btn-contato">Contato</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <main>
-      <section id="sobre" class="sobre">
-        <div class="descricao">
-          <p>Olá!</p>
-          <p>
-            Me chamo Bianca e atualmente estou no quinto semestre do curso de
-            Desenvolvimento de Software Multiplataforma na Fatec Jacareí e já
-            realizei um técnico de Desenvolvimento de Sistemas na ETEC de
-            S.J.Campos.
-          </p>
-          <p>
-            Sou corintiana, gosto muito de Fórmula 1, ouvir músicas, dirigir por
-            aí e aprender mais sobre carros.
-          </p>
-        </div>
-        <div class="foto">
-          <img src="images/eu.jpg" alt="Foto de Bianca" />
-        </div>
-      </section>
+    <main id="top">
+      <!-- Hero / Sobre -->
+      <section id="sobre" class="section section--hero">
+        <div class="container hero">
+          <div class="hero__text">
+            <h1 class="h1">Oi, eu sou a <span class="mark">Bianca</span> 👋</h1>
+            <p>
+              Estudante de
+              <strong>Desenvolvimento de Software Multiplataforma</strong>
+              (Fatec Jacareí) e técnica em Desenvolvimento de Sistemas (ETEC
+              S.J. Campos).
+            </p>
+            <p>
+              Corintiana, fã de Fórmula 1 e amo dirigir por aí enquanto aprendo
+              sobre carros e tecnologia.
+            </p>
 
-      <section id="projetos" class="projetos">
-        <h2>Projetos acadêmicos</h2>
-        <div class="projetos-grid">
-          <div
-            class="projeto-item"
-            data-link="https://github.com/ThePerryDev/docs"
-          >
-            <img
-              src="images/projetos/prot.gif"
-              alt="Gif do projeto do primeiro semestre"
-            />
-            <p>Site Institucional de Treinamento Ágil</p>
-            <p>
-              Esse projeto consiste na criação de um site institucional para o
-              treinamento da metodologia ágil e seus artefatos, fazendo com que
-              os colaboradores da FATEC padronizem a elaboração de seus projetos
-              e multipliquem a metodologia após o aprendizado.
-            </p>
-            <p>
-              Nesse projeto fiquei como parte da equipe Dev (Desenvolvedora)
-              realizei a codificação de algumas telas, correção de bugs e
-              responsividades, criação do conteúdo e pesquisas sobre o tema.
-            </p>
+            <div class="hero__cta">
+              <a href="#projetos" class="btn btn--dark">Ver projetos</a>
+              <a href="#contato" class="btn">Falar comigo</a>
+            </div>
           </div>
-          <div
-            class="projeto-item"
-            data-link="https://github.com/ThePerryDev/bikepass-documentation"
-          >
+
+          <div class="hero__photo">
             <img
-              src="images/projetos/gif_figma.gif"
-              alt="Gif do projeto do segundo semestre"
+              src="images/eu.jpg"
+              alt="Foto de Bianca"
+              width="360"
+              height="480"
+              loading="lazy"
             />
-            <p>Bikepass</p>
-            <p>
-              O objetivo desse projeto foi a criação de um site que oferece o
-              serviço de locação de bicicletas, onde o usuário pode alugar ou
-              colocar sua bike para aluguel, de acordo com a sua localização.
-            </p>
-            <p>
-              Na produção desse projeto fiquei responsável pela codificação de
-              algumas telas, assim ficando na equipe Dev (Desenvolvedora).
-            </p>
-          </div>
-          <div
-            class="projeto-item"
-            data-link="https://github.com/ThePerryDev/visiona-documentation"
-          >
-            <img
-              src="images/projetos/visiona.png"
-              alt="Gif do projeto do terceiro semestre"
-            />
-            <p>Visiona</p>
-            <p>
-              Esse projeto teve como objetivo a criação de uma plataforma para a
-              administração de projetos de mapemaento realizados pela empresa
-              Visiona.
-            </p>
-            <p>
-              Para a produção desse projeto, ajudei na documentação no GH
-              (GitHub) e na elaboração do FrontEnd, também ajudei na resolução
-              de bugs e responsividades.
-            </p>
-          </div>
-          <div
-            class="projeto-item"
-            data-link="https://github.com/ThePerryDev/NutriPerry"
-          >
-            <img
-              src="images/projetos/cadastro_pessoal.gif"
-              alt="Gif do projeto do segundo semestre"
-            />
-            <p>NutriPerry</p>
-            <p>
-              O projeto foi criado com o intuito de produzir um aplicativo móvel
-              onde o usuário poderá monitorar as calorias ingeridas e gastas
-              durante o dia.
-            </p>
-            <p>
-              Nesse projeto participei como PO (Product Owner) e como Dev
-              (Desenvolvedora) realizando a codificação de algumas telas,
-              resolvendo alguns bugs e responsividades.
-            </p>
           </div>
         </div>
       </section>
 
-      <section id="certificados" class="certificados">
-        <h2>Certificados</h2>
-        <div class="certificados-grid">
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2015.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2015"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2015
-            </p>
-          </div>
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2017.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2017"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2017
-            </p>
-          </div>
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2018.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2018"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2018
-            </p>
-          </div>
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2020.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2020"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2020
-            </p>
-          </div>
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2021.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2022"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2022
-            </p>
-          </div>
-          <div class="certificado-item">
-            <img
-              src="images/certificados/OBA_2022.jpg"
-              alt="Certificado Olimpíada Brasileira de Astronomia e Astrologia 2022"
-            />
-            <p>
-              Certificado Olimpíada Brasileira de Astronomia e Astrologia 2022
-            </p>
+      <!-- Projetos -->
+      <section id="projetos" class="section">
+        <div class="container">
+          <h2 class="h2">Projetos acadêmicos</h2>
+
+          <div class="grid grid--cards projetos-grid">
+            <!-- Projeto 1 -->
+            <a
+              class="card projeto-item"
+              href="https://github.com/ThePerryDev/docs"
+              target="_blank"
+              rel="noopener"
+              aria-label="Abrir GitHub: Site Institucional de Treinamento Ágil"
+            >
+              <div class="card__media">
+                <img
+                  src="images/projetos/prot.gif"
+                  alt="Gif do Projeto: Site Institucional de Treinamento Ágil"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">
+                  Site Institucional de Treinamento Ágil
+                </h3>
+                <p>
+                  Padronização da metodologia ágil e artefatos para
+                  colaboradores da FATEC.
+                </p>
+                <p class="muted">
+                  Atuei como <strong>Dev</strong>: codificação de telas,
+                  correção de bugs e responsividade, além de conteúdo e
+                  pesquisa.
+                </p>
+              </div>
+            </a>
+
+            <!-- Projeto 2 -->
+            <a
+              class="card projeto-item"
+              href="https://github.com/ThePerryDev/bikepass-documentation"
+              target="_blank"
+              rel="noopener"
+              aria-label="Abrir GitHub: Bikepass"
+            >
+              <div class="card__media">
+                <img
+                  src="images/projetos/gif_figma.gif"
+                  alt="Gif do Projeto: Bikepass"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Bikepass</h3>
+                <p>Plataforma de locação de bicicletas por geolocalização.</p>
+                <p class="muted">
+                  Responsável por codificação de telas na equipe
+                  <strong>Dev</strong>.
+                </p>
+              </div>
+            </a>
+
+            <!-- Projeto 3 -->
+            <a
+              class="card projeto-item"
+              href="https://github.com/ThePerryDev/visiona-documentation"
+              target="_blank"
+              rel="noopener"
+              aria-label="Abrir GitHub: Visiona"
+            >
+              <div class="card__media">
+                <img
+                  src="images/projetos/visiona.png"
+                  alt="Imagem do Projeto: Visiona"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Visiona</h3>
+                <p>Plataforma para administração de projetos de mapeamento.</p>
+                <p class="muted">
+                  Apoio em documentação no GitHub e Frontend: resolução de bugs
+                  e responsividade.
+                </p>
+              </div>
+            </a>
+
+            <!-- Projeto 4 -->
+            <a
+              class="card projeto-item"
+              href="https://github.com/ThePerryDev/NutriPerry"
+              target="_blank"
+              rel="noopener"
+              aria-label="Abrir GitHub: NutriPerry"
+            >
+              <div class="card__media">
+                <img
+                  src="images/projetos/cadastro_pessoal.gif"
+                  alt="Gif do Projeto: NutriPerry"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">NutriPerry</h3>
+                <p>App móvel para monitorar calorias ingeridas e gastas.</p>
+                <p class="muted">
+                  Atuei como <strong>PO</strong> e <strong>Dev</strong>: telas,
+                  correções e responsividade.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="contato" class="contato">
-        <div class="redes-sociais">
-          
-          <a href="https://instagram.com/bi.caz" target="_blank" class="redes-item">
-            <img src="images/redes/instagram.png" alt="Logo instagram" />
-            <p>@bi.caz</p>
-          </a>
-      
-          <a href="https://github.com/biancalsc" target="_blank" class="redes-item">
-            <img src="images/redes/github.png" alt="Logo GitHub" />
-            <p>@biancalsc</p>
-          </a>
-      
-          <a href="https://linkedin.com/in/bianca-cacula/" target="_blank" class="redes-item">
-            <img src="images/redes/linkedin.png" alt="Logo Linkedin" />
-            <p>@bianca-cacula/</p>
-          </a>
-      
+      <!-- Certificados -->
+      <section id="certificados" class="section section--alt">
+        <div class="container">
+          <h2 class="h2">Certificados</h2>
+
+          <div class="grid certificados-grid">
+            <!-- Repete os itens em card (mantive seus arquivos) -->
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2015.jpg"
+                alt="OBA 2015"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2015
+              </figcaption>
+            </figure>
+
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2017.jpg"
+                alt="OBA 2017"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2017
+              </figcaption>
+            </figure>
+
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2018.jpg"
+                alt="OBA 2018"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2018
+              </figcaption>
+            </figure>
+
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2020.jpg"
+                alt="OBA 2020"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2020
+              </figcaption>
+            </figure>
+
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2021.jpg"
+                alt="OBA 2021"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2021
+              </figcaption>
+            </figure>
+
+            <figure class="card certificado-item" tabindex="0">
+              <img
+                src="images/certificados/OBA_2022.jpg"
+                alt="OBA 2022"
+                loading="lazy"
+              />
+              <figcaption class="muted">
+                Olimpíada Brasileira de Astronomia 2022
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
-      
+
+      <!-- Contato -->
+      <section id="contato" class="section">
+        <div class="container">
+          <h2 class="h2">Contato</h2>
+
+          <div class="social">
+            <a
+              href="https://instagram.com/bi.caz"
+              target="_blank"
+              rel="noopener"
+              class="social__item"
+            >
+              <img
+                src="images/redes/instagram.png"
+                alt=""
+                width="28"
+                height="28"
+              />
+              <span>@bi.caz</span>
+            </a>
+            <a
+              href="https://github.com/biancalsc"
+              target="_blank"
+              rel="noopener"
+              class="social__item"
+            >
+              <img
+                src="images/redes/github.png"
+                alt=""
+                width="28"
+                height="28"
+              />
+              <span>@biancalsc</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/bianca-cacula/"
+              target="_blank"
+              rel="noopener"
+              class="social__item"
+            >
+              <img
+                src="images/redes/linkedin.png"
+                alt=""
+                width="28"
+                height="28"
+              />
+              <span>/in/bianca-cacula</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__content">
+        <span>© <span id="year"></span> Bianca Lucas</span>
+        <a href="#top" class="to-top" aria-label="Voltar ao topo">↑</a>
+      </div>
+    </footer>
+
+    <!-- Popup -->
+    <div class="popup" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="popup__content" role="document">
+        <button class="popup__close" aria-label="Fechar">×</button>
+        <div class="popup__body"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
