@@ -97,45 +97,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  /* ===== Formulário de contato (Formgrid) ===== */
-  const contactForm = $("#contact-form");
-  const formStatus = $("#form-status");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", async (event) => {
-      event.preventDefault(); // não recarrega a página
-
-      if (formStatus) {
-        formStatus.textContent = "Enviando...";
-      }
-
-      const formData = new FormData(contactForm);
-
-      try {
-        const response = await fetch(contactForm.action, {
-          method: "POST",
-          body: formData,
-        });
-
-        if (response.ok) {
-          if (formStatus) {
-            formStatus.textContent = "Mensagem enviada com sucesso! 💌";
-          }
-          contactForm.reset();
-        } else {
-          if (formStatus) {
-            formStatus.textContent =
-              "Ops, algo deu errado. Tente novamente mais tarde.";
-          }
-        }
-      } catch (error) {
-        console.error(error);
-        if (formStatus) {
-          formStatus.textContent =
-            "Erro ao enviar. Verifique sua conexão e tente de novo.";
-        }
-      }
-    });
-  }
 });
