@@ -1,419 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bianca Lucas — Portfólio</title>
-    <meta
-      name="description"
-      content="Portfólio de Bianca Lucas: projetos, certificados e contato."
-    />
-    <link rel="icon" href="images/raio.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header" role="banner">
-      <div class="container header__content">
-        <a class="logo" href="#top" aria-label="Ir para o topo">
-          <img
-            src="images/raio.png"
-            alt=""
-            class="logo__img"
-            width="48"
-            height="48"
-          />
-          <strong class="logo__text">Bianca Lucas</strong>
-        </a>
+  <title>Bianca Lucas — Portfólio</title>
+  <meta name="description" content="Portfólio de Bianca Lucas: projetos, certificados e contato." />
+  <link rel="icon" href="images/raio.png" type="image/png" />
 
-        <button
-          class="menu-toggle"
-          aria-controls="menu"
-          aria-expanded="false"
-          aria-label="Abrir menu"
-        >
-          ☰
-        </button>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-        <nav
-          id="menu"
-          class="menu"
-          role="navigation"
-          aria-label="Navegação principal"
-        >
-          <ul>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#certificados">Certificados</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header__content">
+      <a class="logo" href="#top" aria-label="Ir para o topo">
+        <img src="images/raio.png" alt="" class="logo__img" width="48" height="48" />
+        <strong class="logo__text">Bianca Lucas</strong>
+      </a>
 
-    <main id="top">
-      <!-- Hero / Sobre -->
-      <section id="sobre" class="section section--hero">
-        <div class="container hero">
-          <div class="hero__text">
-            <h1 class="h1">Oi, eu sou a <span class="mark">Bianca</span> 👋</h1>
-            <p>
-              Estudante de
-              <strong>Desenvolvimento de Software Multiplataforma</strong>
-              (Fatec Jacareí) e técnica em Desenvolvimento de Sistemas (ETEC
-              S.J. Campos).
-            </p>
-            <p>
-              Corintiana, fã de Fórmula 1 e amo dirigir por aí enquanto aprendo
-              sobre carros e tecnologia.
-            </p>
+      <button class="menu-toggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        ☰
+      </button>
 
-            <div class="hero__cta">
-              <a href="#projetos" class="btn btn--dark">Ver projetos</a>
-              <a href="#contato" class="btn">Falar comigo</a>
-            </div>
-          </div>
-
-          <div class="hero__photo">
-            <img
-              src="images/eu.jpg"
-              alt="Foto de Bianca"
-              width="360"
-              height="480"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- Projetos -->
-      <section id="projetos" class="section">
-        <div class="container">
-          <h2 class="h2">Projetos acadêmicos</h2>
-
-          <div class="grid grid--cards projetos-grid">
-            <!-- Projeto 1 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/docs"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: Site Institucional de Treinamento Ágil"
-            >
-              <div class="card__media">
-                <img
-                  src="images/projetos/prot.gif"
-                  alt="Gif do Projeto: Site Institucional de Treinamento Ágil"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">
-                  Site Institucional de Treinamento Ágil
-                </h3>
-                <p>
-                  Padronização da metodologia ágil e artefatos para
-                  colaboradores da FATEC.
-                </p>
-                <p class="muted">
-                  Atuei como <strong>Dev</strong>: codificação de telas,
-                  correção de bugs e responsividade, além de conteúdo e
-                  pesquisa.
-                </p>
-              </div>
-            </a>
-
-            <!-- Projeto 2 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/bikepass-documentation"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: Bikepass"
-            >
-              <div class="card__media">
-                <img
-                  src="images/projetos/gif_figma.gif"
-                  alt="Gif do Projeto: Bikepass"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Bikepass</h3>
-                <p>Plataforma de locação de bicicletas por geolocalização.</p>
-                <p class="muted">
-                  Responsável por codificação de telas na equipe
-                  <strong>Dev</strong>.
-                </p>
-              </div>
-            </a>
-
-            <!-- Projeto 3 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/visiona-documentation"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: Visiona"
-            >
-              <div class="card__media">
-                <img
-                  src="images/projetos/visiona.png"
-                  alt="Imagem do Projeto: Visiona"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Visiona</h3>
-                <p>Plataforma para administração de projetos de mapeamento.</p>
-                <p class="muted">
-                  Apoio em documentação no GitHub e Frontend: resolução de bugs
-                  e responsividade.
-                </p>
-              </div>
-            </a>
-
-            <!-- Projeto 4 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/NutriPerry"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: NutriPerry"
-            >
-              <div class="card__media">
-                <img
-                  src="images/projetos/cadastro_pessoal.gif"
-                  alt="Gif do Projeto: NutriPerry"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">NutriPerry</h3>
-                <p>App móvel para monitorar calorias ingeridas e gastas.</p>
-                <p class="muted">
-                  Atuei como <strong>PO</strong> e <strong>Dev</strong>: telas,
-                  correções e responsividade.
-                </p>
-              </div>
-            </a>
-
-            <!-- Projeto 5 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/Hyperion-documentation"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: Hyperion"
-            >
-              <div class="card__media">
-                <img
-                  src="images/projetos/Prototipo-Inicial.gif"
-                  alt="Gif do Projeto: Hyperion"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card__body">
-                <h3 class="card__title">Hyperion</h3>
-                <p>
-                  Plataforma para o monitoramento de queimadas utilizando IA.
-                </p>
-                <p class="muted">
-                  Atuei como <strong>Dev</strong>: desenvolvendo a tela de
-                  usuários, ajudei na melhoria da interface e correção de Bugs e
-                  responsividade.
-                </p>
-              </div>
-            </a>
-
-            <!-- Projeto 6 -->
-            <a
-              class="card projeto-item"
-              href="https://github.com/ThePerryDev/MindCare"
-              target="_blank"
-              rel="noopener"
-              aria-label="Abrir GitHub: MindCare"
-            >
-              <div class="card__media">
-                <video
-                  src="images/projetos/gifmindcare.mp4"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                ></video>
-              </div>
-
-              <div class="card__body">
-                <h3 class="card__title">MindCare</h3>
-                <p>
-                  Aplicativo móvel para saúde mental com trilhas, humor,
-                  desafios e animações guiadas.
-                </p>
-                <p class="muted">
-                  Atuei como <strong>Dev</strong>: definição das trilhas,
-                  desenvolvimento das telas em React Native, melhorias de UX/UI
-                  e integração com backend.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certificados -->
-      <section id="certificados" class="section section--alt">
-        <div class="container">
-          <h2 class="h2">Certificados</h2>
-
-          <div class="grid certificados-grid">
-            <!-- Repete os itens em card (mantive seus arquivos) -->
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2015.jpg"
-                alt="OBA 2015"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2015
-              </figcaption>
-            </figure>
-
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2017.jpg"
-                alt="OBA 2017"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2017
-              </figcaption>
-            </figure>
-
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2018.jpg"
-                alt="OBA 2018"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2018
-              </figcaption>
-            </figure>
-
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2020.jpg"
-                alt="OBA 2020"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2020
-              </figcaption>
-            </figure>
-
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2021.jpg"
-                alt="OBA 2021"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2021
-              </figcaption>
-            </figure>
-
-            <figure class="card certificado-item" tabindex="0">
-              <img
-                src="images/certificados/OBA_2022.jpg"
-                alt="OBA 2022"
-                loading="lazy"
-              />
-              <figcaption class="muted">
-                Olimpíada Brasileira de Astronomia 2022
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contato -->
-      <section id="contato" class="section">
-        <div class="container">
-          <h2 class="h2">Contato</h2>
-
-          <div class="social">
-            <a
-              href="https://instagram.com/bi.caz"
-              target="_blank"
-              rel="noopener"
-              class="social__item"
-            >
-              <img
-                src="images/redes/instagram.png"
-                alt=""
-                width="28"
-                height="28"
-              />
-              <span>@bi.caz</span>
-            </a>
-            <a
-              href="https://github.com/biancalsc"
-              target="_blank"
-              rel="noopener"
-              class="social__item"
-            >
-              <img
-                src="images/redes/github.png"
-                alt=""
-                width="50"
-                height="28"
-              />
-              <span>@biancalsc</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/bianca-cacula/"
-              target="_blank"
-              rel="noopener"
-              class="social__item"
-            >
-              <img
-                src="images/redes/linkedin.png"
-                alt=""
-                width="28"
-                height="28"
-              />
-              <span>/in/bianca-cacula</span>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer__content">
-        <span>© <span id="year"></span> Bianca Lucas</span>
-        <a href="#top" class="to-top" aria-label="Voltar ao topo">↑</a>
-      </div>
-    </footer>
-
-    <!-- Popup -->
-    <div class="popup" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="popup__content" role="document">
-        <button class="popup__close" aria-label="Fechar">×</button>
-        <div class="popup__body"></div>
-      </div>
+      <nav id="menu" class="menu" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <script src="js/script.js"></script>
-  </body>
+  <main id="top">
+    <!-- Hero / Sobre -->
+    <section id="sobre" class="section section--hero">
+      <div class="container hero">
+        <div class="hero__text">
+          <h1 class="h1">Oi, eu sou a <span class="mark">Bianca</span> 👋</h1>
+          <p>
+            Estudante de
+            <strong>Desenvolvimento de Software Multiplataforma</strong>
+            (Fatec Jacareí) com formação prevista para Dezembro de 2026 e técnica em Desenvolvimento de Sistemas (ETEC
+            S.J. Campos).
+          </p>
+          <p>
+            Corintiana, fã de Fórmula 1 e amo dirigir por aí enquanto aprendo
+            sobre carros e tecnologia.
+          </p>
+
+          <div class="hero__cta">
+            <a href="#projetos" class="btn btn--dark">Ver projetos</a>
+            <a href="#contato" class="btn">Falar comigo</a>
+          </div>
+        </div>
+
+        <div class="hero__photo">
+          <img src="images/eu.jpg" alt="Foto de Bianca" width="360" height="480" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2 class="h2">Projetos acadêmicos</h2>
+
+        <div class="grid grid--cards projetos-grid">
+          <!-- Projeto 1 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/docs" target="_blank" rel="noopener"
+            aria-label="Abrir GitHub: Site Institucional de Treinamento Ágil">
+            <div class="card__media">
+              <img src="images/projetos/prot.gif" alt="Gif do Projeto: Site Institucional de Treinamento Ágil"
+                loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">
+                Site Institucional de Treinamento Ágil
+              </h3>
+              <p>
+                Padronização da metodologia ágil e artefatos para
+                colaboradores da FATEC.
+              </p>
+              <p class="muted">
+                Atuei como <strong>Dev</strong>: codificação de telas,
+                correção de bugs e responsividade, além de conteúdo e
+                pesquisa.
+              </p>
+              <p class="muted">
+                Tecnologias: HTLM5, CSS3, JavaScript, Typescript, Versionameto com Git/GitHub, estruturação semântica,
+                responsividade, boas práticas de código e organização de páginas para documentação.
+              </p>
+            </div>
+          </a>
+
+          <!-- Projeto 2 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/bikepass-documentation" target="_blank"
+            rel="noopener" aria-label="Abrir GitHub: Bikepass">
+            <div class="card__media">
+              <img src="images/projetos/gif_figma.gif" alt="Gif do Projeto: Bikepass" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Bikepass</h3>
+              <p>Plataforma de locação de bicicletas por geolocalização.</p>
+              <p class="muted">
+                Responsável por codificação de telas na equipe
+                <strong>Dev</strong>.
+              </p>
+              <p class="muted">
+                Tecnologias: Javascript, Typescript, React, consumo de APIs REST, manipulação de rotas, componentização,
+                hooks, integração com o backend e boas práticas de UX em interfaces web.
+              </p>
+            </div>
+          </a>
+
+          <!-- Projeto 3 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/visiona-documentation" target="_blank"
+            rel="noopener" aria-label="Abrir GitHub: Visiona">
+            <div class="card__media">
+              <img src="images/projetos/visiona.png" alt="Imagem do Projeto: Visiona" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Visiona</h3>
+              <p>Plataforma para administração de projetos de mapeamento.</p>
+              <p class="muted">
+                Apoio em documentação no GitHub e Frontend: resolução de bugs
+                e responsividade.
+              </p>
+              <p class="muted">
+                Tecnologias: HTML, CSS, JavaScript, GitHub Projects, documentação técnica, estruturação de design
+                system, responsividade avançada e organização de layouts para aplicações corporativas.
+              </p>
+            </div>
+          </a>
+
+          <!-- Projeto 4 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/NutriPerry" target="_blank" rel="noopener"
+            aria-label="Abrir GitHub: NutriPerry">
+            <div class="card__media">
+              <img src="images/projetos/cadastro_pessoal.gif" alt="Gif do Projeto: NutriPerry" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">NutriPerry</h3>
+              <p>App móvel para monitorar calorias ingeridas e gastas.</p>
+              <p class="muted">
+                Atuei como <strong>PO</strong> e <strong>Dev</strong>: telas,
+                correções e responsividade.
+              </p>
+              <p class="muted">
+                React Native, TypeScript, Flexbox, AsyncStorage, gerenciamento de estado, criação de componentes
+                reutilizáveis, animações básicas, navegação mobile e integração de lógica de cálculo nutricional.
+              </p>
+            </div>
+          </a>
+
+          <!-- Projeto 5 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/Hyperion-documentation" target="_blank"
+            rel="noopener" aria-label="Abrir GitHub: Hyperion">
+            <div class="card__media">
+              <img src="images/projetos/Prototipo-Inicial.gif" alt="Gif do Projeto: Hyperion" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Hyperion</h3>
+              <p>
+                Plataforma para o monitoramento de queimadas utilizando IA.
+              </p>
+              <p class="muted">
+                Atuei como <strong>Dev</strong>: desenvolvendo a tela de
+                usuários, ajudei na melhoria da interface e correção de Bugs e
+                responsividade.
+              </p>
+              <p class="muted">
+                Python, Machine Learning (Random Forest, SVM), pré-processamento de imagens, integração com modelos de
+                IA, React para interface, documentação técnica, Git, além de boas práticas de UX/UI para dashboards.
+              </p>
+            </div>
+          </a>
+
+          <!-- Projeto 6 -->
+          <a class="card projeto-item" href="https://github.com/ThePerryDev/MindCare" target="_blank" rel="noopener"
+            aria-label="Abrir GitHub: MindCare">
+            <div class="card__media">
+              <video src="images/projetos/gifmindcare.mp4" autoplay muted loop playsinline></video>
+            </div>
+
+            <div class="card__body">
+              <h3 class="card__title">MindCare</h3>
+              <p>
+                Aplicativo móvel para saúde mental com trilhas, humor,
+                desafios e animações guiadas.
+              </p>
+              <p class="muted">
+                Atuei como <strong>Dev</strong>: definição das trilhas,
+                desenvolvimento das telas em React Native, melhorias de UX/UI
+                e integração com backend.
+              </p>
+              <p class="muted">
+                React Native, TypeScript, Expo, Styled Components, gerenciamento de estados e trilhas, AsyncStorage,
+                navegação (Stack e Tabs), integração com backend, arquitetura de pastas, animações visuais, criação de
+                componentes modulares e boas práticas de usabilidade em apps de saúde mental.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificados -->
+    <section id="certificados" class="section section--alt">
+      <div class="container">
+        <h2 class="h2">Certificados</h2>
+
+        <div class="grid certificados-grid">
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2015.jpg" alt="OBA 2015" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2015
+            </figcaption>
+          </figure>
+
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2017.jpg" alt="OBA 2017" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2017
+            </figcaption>
+          </figure>
+
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2018.jpg" alt="OBA 2018" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2018
+            </figcaption>
+          </figure>
+
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2020.jpg" alt="OBA 2020" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2020
+            </figcaption>
+          </figure>
+
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2021.jpg" alt="OBA 2021" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2021
+            </figcaption>
+          </figure>
+
+          <figure class="card certificado-item" tabindex="0">
+            <img src="images/certificados/OBA_2022.jpg" alt="OBA 2022" loading="lazy" />
+            <figcaption class="muted">
+              Olimpíada Brasileira de Astronomia 2022
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="container">
+        <h2 class="h2">Contato</h2>
+
+        <div class="social">
+          <a href="https://instagram.com/bi.caz" target="_blank" rel="noopener" class="social__item">
+            <img src="images/redes/instagram.png" alt="" width="28" height="28" />
+            <span>@bi.caz</span>
+          </a>
+          <a href="https://github.com/biancalsc" target="_blank" rel="noopener" class="social__item">
+            <img src="images/redes/github.png" alt="" width="50" height="28" />
+            <span>@biancalsc</span>
+          </a>
+          <a href="https://linkedin.com/in/bianca-cacula/" target="_blank" rel="noopener" class="social__item">
+            <img src="images/redes/linkedin.png" alt="" width="28" height="28" />
+            <span>/in/bianca-cacula</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <span>© <span id="year"></span> Bianca Lucas</span>
+      <a href="#top" class="to-top" aria-label="Voltar ao topo">↑</a>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="popup__content" role="document">
+      <button class="popup__close" aria-label="Fechar">×</button>
+      <div class="popup__body"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
