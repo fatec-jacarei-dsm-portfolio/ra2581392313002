@@ -308,7 +308,7 @@ body{
   padding:10px 12px;
 }
 
-/* Social */
+/* Social / Contato */
 .social{
   display:flex;
   gap:18px;
@@ -330,6 +330,55 @@ body{
 .social__item:hover{
   transform:translateY(-2px);
   box-shadow:var(--shadow-sm);
+}
+
+/* Grid da seção de contato (redes + formulário) */
+.contato__grid{
+  display:grid;
+  gap:24px;
+  align-items:flex-start;
+}
+@media (min-width: 820px){
+  .contato__grid{
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+}
+
+/* Formulário de contato */
+.contact-form{
+  background:var(--white);
+  border-radius:var(--radius);
+  border:3px solid var(--line);
+  padding:16px 18px 20px;
+  box-shadow:var(--shadow-sm);
+}
+.form-group{
+  margin-bottom:14px;
+}
+.form-group label{
+  display:block;
+  margin-bottom:4px;
+  font-weight:500;
+}
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:9px 10px;
+  border-radius:10px;
+  border:1.6px solid #d0d7e2;
+  font:inherit;
+  resize:vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--line);
+  box-shadow:0 0 0 2px rgba(25,79,165,.14);
+}
+
+.form-status{
+  margin-top:10px;
+  font-size:.9rem;
 }
 
 /* Footer */

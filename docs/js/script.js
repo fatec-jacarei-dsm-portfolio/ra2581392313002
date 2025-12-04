@@ -14,10 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const active = nav.classList.toggle("active");
       btnMenu.setAttribute("aria-expanded", active ? "true" : "false");
     });
-    $$("#menu a").forEach(a => a.addEventListener("click", () => {
-      nav.classList.remove("active");
-      btnMenu.setAttribute("aria-expanded", "false");
-    }));
+    $$("#menu a").forEach(a =>
+      a.addEventListener("click", () => {
+        nav.classList.remove("active");
+        btnMenu.setAttribute("aria-expanded", "false");
+      })
+    );
   }
 
   /* ====== POPUP: cria se não existir ====== */
@@ -64,9 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closePopup();
   });
 
-  /* ====== CERTIFICADOS: delegação de clique ======
-     Funciona se o item for <div>, <figure>, etc., com classe .certificado-item
-  */
+  /* ====== CERTIFICADOS: delegação de clique ====== */
   document.addEventListener("click", (e) => {
     const certEl = e.target.closest?.(".certificado-item");
     if (!certEl) return;
@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const caption =
       (certEl.querySelector("figcaption")?.textContent ||
-       certEl.querySelector("p")?.textContent || "")
+        certEl.querySelector("p")?.textContent ||
+        "")
         .trim();
 
     const html = `
@@ -96,4 +97,45 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /* ===== Formulário de contato (Formgrid) ===== */
+  const contactForm = $("#contact-form");
+  const formStatus = $("#form-status");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault(); // não recarrega a página
+
+      if (formStatus) {
+        formStatus.textContent = "Enviando...";
+      }
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          if (formStatus) {
+            formStatus.textContent = "Mensagem enviada com sucesso! 💌";
+          }
+          contactForm.reset();
+        } else {
+          if (formStatus) {
+            formStatus.textContent =
+              "Ops, algo deu errado. Tente novamente mais tarde.";
+          }
+        }
+      } catch (error) {
+        console.error(error);
+        if (formStatus) {
+          formStatus.textContent =
+            "Erro ao enviar. Verifique sua conexão e tente de novo.";
+        }
+      }
+    });
+  }
 });
